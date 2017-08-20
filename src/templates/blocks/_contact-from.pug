@@ -1,0 +1,17 @@
+mixin contact-form(title, classes_mod)
+  +b('section').contact-form(class=classes_mod)
+    .row
+      if title
+        +e.heading
+          +e('h2').title= title
+      +e.content
+        +e('form').form
+          +e.form-group._email
+            +b.form-group
+              +e('input').text(type='email', name='email', placeholder='Email')
+          +e.form-group._message
+            +b.form-group
+              +e('textarea').textarea(name='message', placeholder='Message', rows='1')
+          +e.form-group._button
+            +b.form-group
+              +e('button').button.btn.btn_yellow(name='message', placeholder='Message', rows='1')

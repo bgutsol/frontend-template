@@ -1,0 +1,141 @@
+.btn{
+  display: block;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/*
+
+.btn_main{
+  margin: auto;
+  text-align: center;
+  border-radius: 50px;
+  border: solid 2px $sun-yellow;
+  width: 260px;
+  line-height: 46px;
+  color: $text-color;
+  font-size: 1.8rem;
+  font-weight: 500;
+  position: relative;
+  @include transition(background-color $primary_transition);
+
+  &::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: $sun-yellow-two;
+    border-radius: 50%;
+    right: 20px;
+    top: 50%;
+    margin-top: -3px;
+    @include transition(background-color $primary_transition);
+  }
+
+  &:hover{
+    background-color: $sun-yellow;
+    &::after{
+      background-color: $w;
+    }
+  }
+
+  @include mq(s){
+    width: 230px;
+    &::after{
+      display: none;
+    }
+  }
+}
+
+.btn_red{
+  font-size: 1.8rem;
+  color: $w;
+  margin: auto;
+  text-align: center;
+  border-radius: 50px;
+  background-image: linear-gradient(to bottom, #ff5f3b, #ff2a68);
+  display: inline-block;
+  padding: 13px 35px;
+  line-height: 1.2;
+  position: relative;
+
+  &:hover{
+    background-image: linear-gradient(-180deg, #FF7252 0%, #FF447A 100%);
+    text-decoration: none;
+  }
+
+  @include mq(m){
+    @include center(x);
+    span{
+      display: none;
+    }
+  }
+}
+
+.btn_black{
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 13px 20px;
+  color: $w;
+  margin: auto;
+  text-align: center;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg, #232323 0%, #000000 100%);
+  width: 100%;
+  margin-top: 20px;
+
+  &:hover{
+    background-image: linear-gradient(-180deg, #FF7252 0%, #FF447A 100%);
+  }
+}
+
+.btn_violet{
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 13px 20px;
+  color: $w;
+  text-align: center;
+  border-radius: 50px;
+  background-image: linear-gradient(357deg, #3023ae, #7171ec);
+  @include transition(opacity $primary_transition);
+  cursor: pointer;
+
+  &:hover{
+    opacity: .75;
+  }
+}
+
+.btn_red_transparent{
+  border-color: #fc3b37;
+  color: #fc3b37;
+  width: auto;
+  padding: 0 35px;
+  border-width: 3px;
+  margin-top: 30px;
+  margin-left: 0;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  &::after{
+    display: none;
+  }
+
+  &:hover{
+    color: #fff;
+    background-color: #fc3b37;
+    text-decoration: none !important;
+  }
+
+  @include mq(m){
+    color: #515151;
+    width: auto !important;
+    line-height: 1.5;
+    padding: 5px 25px;
+    @include center(x);
+    span{
+      display: none;
+    }
+  }
+}*/

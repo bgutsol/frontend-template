@@ -1,0 +1,107 @@
+// breakpoints
+
+$S:     480px;
+$M:     768px;
+$L:     1024px;
+
+// media queries
+
+@mixin mq-max($canvas) {
+  @if $canvas == s {
+    @media only screen and (max-width: $S) { @content; }
+  }
+  @else if $canvas == m {
+    @media only screen and (max-width: $M) { @content; }
+  }
+  @else if $canvas == l {
+    @media only screen and (max-width: $L) { @content; }
+  }
+  @else {
+    @media only screen and (max-width: $canvas + 'px') { @content; }
+  }
+}
+
+@mixin mq($canvas) {
+  @if $canvas == s {
+    @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == m {
+    @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == l {
+    @media only screen and (min-width: $L) { @content; }
+  }
+  @else {
+    @media only screen and (min-width: $canvas + 'px') { @content; }
+  }
+}
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+// antialiasing mode font rendering
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// color tint and shade
+
+@function shade(
+  $color,
+  $percent
+) {
+
+  @return mix(#000, $color, $percent);
+}
+@function tint(
+  $color,
+  $percent
+) {
+
+  @return mix(#fff, $color, $percent);
+}
+
+
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width:  $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

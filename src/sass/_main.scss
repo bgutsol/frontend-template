@@ -1,0 +1,147 @@
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  background-color: #ac00e6;
+}
+
+body {
+  font: {
+    size: 16px;
+    family: $primary-font;
+  }
+  background-color: #fff;
+  color: $text-color;
+  @include font-smoothing;
+}
+
+:focus{
+  outline: 0;
+}
+
+p,h1,h2,h3,h4,ul{
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+}
+
+a {
+  @include transition(color, opacity $primary_transition);
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  margin: auto;
+  max-width: 1280px;
+  padding: 0 20px;
+  position: relative;
+
+  @include mq(m){
+    padding: 0 10px;
+  }
+}
+
+/* --------------------------------
+
+Main content
+
+-------------------------------- */
+
+body.overflow-hidden {
+  overflow: hidden;
+}
+
+
+/*Base input elements*/
+/*
+input,
+textarea{
+  background: none;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.17);
+  border: solid 1px #d8dade;
+  padding: 12px 15px 13px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #7c818b;
+
+  &:focus{
+    outline: 0;
+    background-color: $w;
+  }
+
+  &.error{
+    border-color: $orangey-red;
+  }
+}
+*/
+
+textarea{
+  resize: none;
+}
+
+/* xkeyframes */
+@include keyframes(cd-fade-in) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeInDown) {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include keyframes(fadeInDownHeader) {
+  0% {
+    opacity: 0;
+    transform: translateY(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(fadeOut) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}

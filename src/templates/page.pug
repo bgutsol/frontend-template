@@ -1,6 +1,237 @@
 ---
-title: Index Page
+title: Home Page
 ---
-extends layouts/_layout
+extends layouts/_layout_home
 block content
-  h1 Index page
+  +b('section').hero
+    .row
+      +e.cats
+        +e.cats-item._red._first
+          img(src='img/hero/cat-red.svg')
+        +e.cats-item._yellow
+          img(src='img/hero/cat-yellow.svg')
+        +e.cats-item._violet
+          img(src='img/hero/cat-violet.svg')
+        +e.cats-item._red._second
+          img(src='img/hero/cat-red.svg')
+      +e('h1').title We work flat, fast, and fun – without any awkward handoffs between thinking and making
+
+  +section('Process', !1, 'bg_white')
+    +b.tiles._process
+      +e.tiles-item
+        +b.advantage
+          +e.img
+            img(src='')
+          +e.text
+            +e('h3').title Analyze
+            +e('p').descr I cannot express what a satisfaction it was to me to come into my old
+
+      +e.tiles-item
+        +b.advantage
+          +e.img
+            img(src='')
+          +e.text
+            +e('h3').title Define
+            +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+
+      +e.tiles-item
+        +b.advantage
+          +e.img
+            img(src='')
+          +e.text
+            +e('h3').title Create
+            +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+
+      +e.tiles-item
+        +b.advantage
+          +e.img
+            img(src='')
+          +e.text
+            +e('h3').title Build
+            +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+
+  .bg-container
+    +section('Services', !1, '_bg_transparent')
+      +b.tiles._services
+        +e.tiles-item
+          +b.advantage
+            +e.img
+              img(src='')
+            +e.text
+              +e('h3').title Design
+              +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+              +e.link
+                +b('a').link._details(href="#0") details
+                  +icon('b-arrow')
+
+        +e.tiles-item
+          +b.advantage
+            +e.img
+              img(src='')
+            +e.text
+              +e('h3').title Digital
+              +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+              +e.link
+                +b('a').link._details(href="#0") details
+                  +icon('b-arrow')
+
+        +e.tiles-item
+          +b.advantage
+            +e.img
+              img(src='')
+            +e.text
+              +e('h3').title Development
+              +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+              +e.link
+                +b('a').link._details(href="#0") details
+                  +icon('b-arrow')
+
+        +e.tiles-item
+          +b.advantage
+            +e.img
+              img(src='')
+            +e.text
+              +e('h3').title Mobile Apps
+              +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+              +e.link
+                +b('a').link._details(href="#0") details
+                  +icon('b-arrow')
+
+        +e.tiles-item
+          +b.advantage
+            +e.img
+              img(src='')
+            +e.text
+              +e('h3').title Strategy
+              +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+              +e.link
+                +b('a').link._details(href="#0") details
+                  +icon('b-arrow')
+
+        +e.tiles-item
+          +b.advantage
+            +e.img
+              img(src='')
+            +e.text
+              +e('h3').title Branding
+              +e('p').descr They belong to the old gentleman, said Oliver, wringing his hands
+              +e.link
+                +b('a').link._details(href="#0") details
+                  +icon('b-arrow')
+
+      +e.bottom-link
+        +b('a').link._seeAll(href="#0")
+          i
+          | See All Services
+
+
+
+    +section('Works', !1, '_bg_transparent')
+      +b.tiles._works
+        +e.tiles-item
+          +b.work-sample
+            +e.card
+              +e.heading
+                +e('p').label Web
+                +e('h3').title Website for Aist USA partner
+              +e.client
+                +e('p').label Client
+                +e.client-info
+                  +b.user-preview
+                    +e.img
+                      img(src='')
+                    +e('p').name Yuriy Mazepa
+              +e.link
+                +b('a').link._arrow
+                  +icon('r-arrow')
+            +e.desktop
+              img(src='')
+            +e.mobile
+              img(src='')
+
+    +section('Blog', !1, '_bg_transparent')
+      +b.tiles._blog
+        +e.tiles-item
+          +b.blog-card
+            +e.img
+              +retina({fileName: 'img/blog/post1', format: 'png'})
+            +e.info
+              +e('h3').title How Much Does It Cost to Develop an App Like SnapChat?
+              +e('p').text I cannot express what a satisfaction it was to me to come into my old...
+              +e.author
+                +b.user-preview
+                  +e.img
+                    img(src='')
+                  +e('p').name Yuriy Mazepa
+
+
+
+    +section('Clients', !1, '_bg_transparent _clients')
+      +b.tiles._clients
+        +e.tiles-item
+          +b.client-card
+            +e.img
+              +retina({fileName: 'img/clients/up', format: 'png', width: '64px'})
+
+        +e.tiles-item
+          +b.client-card
+            +e.img
+              +retina({fileName: 'img/clients/wp', format: 'png', width: '215px'})
+
+        +e.tiles-item
+          +b.client-card
+            +e.img
+              +retina({fileName: 'img/clients/google', format: 'png', width: '144px'})
+
+        +e.tiles-item
+          +b.client-card
+            +e.img
+              +retina({fileName: 'img/clients/techCrunch', format: 'png', width: '200px'})
+
+    //+section('Reviews', !1, '_bg_transparent')
+    //  +b.slider._testimonials.js-slider-testimonials
+    //    +e.slider-item
+    //      +b.testimonial-card
+    //        +e('blockquote').blockquote Hell Cat has been crucial collaborators on my special projects. I’ve never worked with such personable people — that is what separates them.
+    //        +e.author
+    //          +b.user-preview
+    //            +e.img
+    //              img(src='')
+    //            +e('p').name Yuriy Mazepa , CEO, Aist USA
+    //
+    //    +e.slider-item
+    //      +b.testimonial-card
+    //        +e('blockquote').blockquote Hell Cat turned our legacy enterprise software into a consumer-grade experience.
+    //        +e.author
+    //          +b.user-preview
+    //            +e.img
+    //              img(src='')
+    //            +e('p').name Gary Trainor, CEO, Viventium
+    //
+    //    +e.slider-item
+    //      +b.testimonial-card
+    //        +e('blockquote').blockquote Hell Cat turned our legacy enterprise software into a consumer-grade experience.
+    //        +e.author
+    //          +b.user-preview
+    //            +e.img
+    //              img(src='')
+    //            +e('p').name Gary Trainor, CEO, Viventium
+
+    +contact-form('Wonts work whith us?', '_bg_transparent')
+
+    // Button trigger modal
+    button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModal')
+      | Launch demo modal
+    // Modal
+    #exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            h5#exampleModalLabel.modal-title Modal title
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body
+            | ...
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes

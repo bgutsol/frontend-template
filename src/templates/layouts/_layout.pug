@@ -1,17 +1,15 @@
-include _mixins
+include ../blocks/_all
+include ../helpers/_mixins
+
 doctype html
 html
   head
-    include _head
+    include ../partials/_head
+  body
+    block main
 
-  body(class=bodyClass)
-    //BEGIN out
-    .out(class=outClass)
-      block header
-        include ../partials/_header
-      block content
-    //END out
+    block modals
 
-    //LOAD SCRIPTS
     block scripts
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js")
       script(type="text/javascript" src="js/app.js")

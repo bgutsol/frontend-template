@@ -1,0 +1,17 @@
+//BEGIN footer
+mixin m-footer(classes)
+  +b('footer').m-footer(class=classes)
+    +e.container
+      +e('a').email(href='mailto:#0')
+        +icon('mail')
+        | hi@hellcat.digital
+      +e('ul').social
+        li
+          a(href="#0") instagram
+        li
+          a(href="#0") facebook
+        li
+          a(href="#0") twitter
+      +e.copyrights &copy; hellcat digital
+
+//END footer

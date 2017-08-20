@@ -7,3 +7,10 @@ mixin icon(name, modClass)
     - var modClass = ' ' + modClass
   svg(class=name + modClass)
     use(xlink:href= svgSprite + '#' + name)
+
+
+mixin retina(object)
+  img(src=object.fileName + '.' + object.format
+      srcset=object.fileName + '@2x.' + object.format + ' 2x'
+      width=object.width
+      height=object.height)

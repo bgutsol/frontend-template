@@ -1,0 +1,13 @@
+mixin section(title, subtitle, classes_mod)
+		+b('section').section(class=classes_mod)
+			.row
+				if title
+					+e.heading
+						+e('h2').title= title
+						if subtitle
+							+e('p').subtitle= subtitle
+				if block
+					+e.content
+						block
+				else
+					p No content provided

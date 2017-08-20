@@ -1,0 +1,19 @@
+//BEGIN header
+mixin m-header(classes)
+  +b('header').m-header.js-m-header(class=classes)
+    +e.container
+      +e('a').logo
+        img(src="img/m-logo.svg")
+      +e('button').menu-toggle.js-menu-toggle
+        span
+      +e.nav.js-desktop-nav
+        +b('nav').m-nav.js-main-nav
+          ul
+            li
+              a(href='#0') About
+            li
+              a(href='#0') Works
+            li
+              a(href='#0') Blog
+      +e('a').btn-contact.btn.btn_red.js-btn-contact(href="#0") Contacts
+//END header
